@@ -1,0 +1,66 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "iniciarTodosMss",
+            "dependsOrder": "parallel",
+            "dependsOn": [
+                "Barramento",
+                "Classificacao",
+                "Consulta",
+                "Lembretes",
+                "Observacoes"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Barramento",
+            "type": "shell",
+            "command": "cd ./mss/barramento  | npm run start:dev",
+            "presentation": {
+                "panel": "dedicated",
+                "group": "mss"
+            }
+        },
+        {
+            "label": "Classificacao",
+            "type": "shell",
+            "command": "cd ./mss/classificacao  | npm run start:dev",
+            "presentation": {
+                "panel": "dedicated",
+                "group": "mss"
+            }
+        },
+        {
+            "label": "Consulta",
+            "type": "shell",
+            "command": "cd ./mss/consulta  | npm run start:dev",
+            "presentation": {
+                "panel": "dedicated",
+                "group": "mss"
+            }
+        },
+        {
+            "label": "Lembretes",
+            "type": "shell",
+            "command": "cd ./mss/lembretes  | npm run start:dev",
+            "presentation": {
+                "panel": "dedicated",
+                "group": "mss"
+            }
+        },
+        {
+            "label": "Observacoes",
+            "type": "shell",
+            "command": "cd ./mss/observacoes  | npm run start:dev",
+            "presentation": {
+                "panel": "dedicated",
+                "group": "mss"
+            }
+        }
+    ]
+}
